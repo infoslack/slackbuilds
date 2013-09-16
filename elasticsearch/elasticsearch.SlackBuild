@@ -85,6 +85,9 @@ cp -r lib/* $PKG/usr/lib/$PRGNAM
 mkdir -p $PKG/etc/$PRGNAM
 cp config/* $PKG/etc/$PRGNAM
 
+mkdir -p $PKG/etc/default
+cat $CWD/default/$PRGNAM > $PKG/etc/default/$PRGNAM
+
 mkdir -p $PKG/etc/rc.d
 cat $CWD/rc.elasticsearch > $PKG/etc/rc.d/rc.elasticsearch.new
 
