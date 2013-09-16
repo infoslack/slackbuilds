@@ -89,7 +89,7 @@ mkdir -p $PKG/etc/default
 cat $CWD/default/$PRGNAM > $PKG/etc/default/$PRGNAM
 
 mkdir -p $PKG/etc/rc.d
-cat $CWD/rc.elasticsearch > $PKG/etc/rc.d/rc.elasticsearch.new
+cat $CWD/rc.elasticsearch > $PKG/etc/rc.d/rc.elasticsearch
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
