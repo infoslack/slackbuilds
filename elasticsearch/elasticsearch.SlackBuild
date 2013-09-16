@@ -76,11 +76,11 @@ cp -a \
   LICENSE* NOTICE* README* \
   $PKG/usr/doc/$PRGNAM-$VERSION
 
-mkdir -p $PKG/usr/bin
-cp bin/* $PKG/usr/bin
+mkdir -p $PKG/usr/share/$PRGNAM/bin
+cp bin/* $PKG/usr/share/$PRGNAM/bin
 
-mkdir -p $PKG/usr/lib/$PRGNAM
-cp -r lib/* $PKG/usr/lib/$PRGNAM
+mkdir -p $PKG/usr/share/$PRGNAM/lib
+cp -r lib/* $PKG/usr/share/$PRGNAM/lib
 
 mkdir -p $PKG/etc/$PRGNAM
 cp config/* $PKG/etc/$PRGNAM
