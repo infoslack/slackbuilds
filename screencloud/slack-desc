@@ -1,0 +1,26 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+           |-----handy-ruler-----------------------------------------------|
+screencloud: ScreenCloud: Easy to use screenshot tool.
+screencloud:
+screencloud: Take a screenshot using one of the 3 hotkeys or simply click
+screencloud: the ScreenCloud tray icon.
+screencloud:
+screencloud: You can choose where you want to save your screenshot.
+screencloud: If you choose to upload your screenshot to the screencloud
+screencloud: website, a link will automatically be copied to your clipboard.
+screencloud:
+screencloud: You can share this link with your friends or colleagues via
+screencloud: email or in an IM conversation.
+screencloud:
+screencloud: ScreenCloud also offers FTP and SFTP uploading if you want to
+screencloud: use your own server.
+screencloud:
+screencloud: Homepage: http://screencloud.net
+screencloud:
+screencloud:
