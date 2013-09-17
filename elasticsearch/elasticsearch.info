@@ -5,6 +5,6 @@ DOWNLOAD="https://download.elasticsearch.org/elasticsearch/elasticsearch/elastic
 MD5SUM="1f3b8ea5468554d47a3862aba2c36176"
 DOWNLOAD_x86_64=""
 MD5SUM_x86_64=""
-REQUIRES="jre"
+REQUIRES="jdk"
 MAINTAINER="Daniel Romero"
 EMAIL="infoslack@gmail.com"
