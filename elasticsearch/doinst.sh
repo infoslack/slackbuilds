@@ -21,3 +21,5 @@ preserve_perms() {
 
   config $NEW
 }
+
+config etc/rc.d/rc.elasticsearch.new
