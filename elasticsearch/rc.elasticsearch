@@ -7,7 +7,7 @@
 # This script requires a 'elasticsearch' user/group to exist before running.
 # The recommended UID/GID is 280. You can create these like so:
 # groupadd -g 280 elasticsearch
-# useradd -u 280 -g elasticsearch -c "ElasticSearch" -s /bin/sh elasticsearch
+# useradd -u 280 -g elasticsearch -s /bin/sh elasticsearch
 
 set -e
 
@@ -20,7 +20,7 @@ ES_USER=$NAME
 ES_GROUP=$NAME
 LOG_DIR=/var/log/$NAME
 DATA_DIR=/var/lib/$NAME
-WORK_DIR=/tmp/$NAME
+WORK_DIR=$DATA_DIR/data
 CONF_DIR=/etc/$NAME
 CONF_FILE=$CONF_DIR/elasticsearch.yml
 PID_FILE=/var/run/$NAME.pid
@@ -39,17 +39,11 @@ test -x $DAEMON || exit 0
 case "$1" in
   start)
 	  echo "Starting $NAME"
-
-	  set +e
-    mkdir -p "$LOG_DIR" "$DATA_DIR" "$WORK_DIR" && chown "$ES_USER":"$ES_GROUP" "$LOG_DIR" "$DATA_DIR" "$WORK_DIR"
-    chmod 0777 -R $DATA_DIR
-    touch "$PID_FILE" && chown "$ES_USER":"$ES_GROUP" "$PID_FILE"
-
+	  touch "$PID_FILE" && chown "$ES_USER":"$ES_GROUP" "$PID_FILE"
 	  sudo -u $ES_USER sh -c "$DAEMON $DAEMON_OPTS"
 	;;
 
   stop)
-	  set +e
 	  if [ -f "$PID_FILE" ]; then
       `cat $PID_FILE | xargs kill -9`
 		  if [ $? -eq 1 ]; then
@@ -64,7 +58,6 @@ case "$1" in
 		    echo "(not running)"
 	  fi
 	  echo "Stop $NAME"
-	  set -e
 	;;
 
   restart)
