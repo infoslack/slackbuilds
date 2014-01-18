@@ -35,3 +35,8 @@ Per operation consistency
   Single document level operations are atomic, consistent, isolated and durable.
 
 Open Source under Apache 2 License.
+
+This script requires a 'elasticsearch' user/group to exist before running.
+The recommended UID/GID is 280. You can create these like so:
+groupadd -g 280 elasticsearch
+useradd -u 280 -g elasticsearch -c "ElasticSearch" -s /bin/sh elasticsearch

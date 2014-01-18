@@ -23,7 +23,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=elasticsearch
-VERSION=${VERSION:-0.90.5}
+VERSION=${VERSION:-0.90.10}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -84,6 +84,8 @@ cp -r lib/* $PKG/usr/share/$PRGNAM/lib
 
 mkdir -p $PKG/etc/$PRGNAM
 cp config/* $PKG/etc/$PRGNAM
+
+chown -R elasticsearch:elasticsearch $PKG/etc/$PRGNAM $PKG/usr/share/$PRGNAM
 
 mkdir -p $PKG/etc/default
 cat $CWD/default/$PRGNAM > $PKG/etc/default/$PRGNAM
