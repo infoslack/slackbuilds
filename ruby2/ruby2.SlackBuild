@@ -1,8 +1,8 @@
 #!/bin/sh
 
-# Slackware build script for Ruby 2.0
+# Slackware build script for Ruby 2.1
 
-# Copyright 2013 Daniel Romero <infoslack@gmail.com>, Fortaleza, CE, BRA
+# Copyright 2014 Daniel Romero <infoslack@gmail.com>, Fortaleza, CE, BRA
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -23,7 +23,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=ruby2
-VERSION=${VERSION:-2.0.0-p353}
+VERSION=${VERSION:-2.1.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
